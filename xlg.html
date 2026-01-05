@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>星露谷日常分享</title>
+</head>
+<body>
+    <div class="stardew-background"></div>
+    
+    <header>
+        <div class="header-content">
+            <h1>星露谷日常分享</h1>
+            <div class="farm-icon">🌱</div>
+        </div>
+        <nav>
+            <a href="#home" data-filter="all">首页</a>
+            <a href="#about" data-filter="农场">关于农场</a>
+            <a href="#contact" data-filter="社区">联系</a>
+        </nav>
+    </header>
+    
+    <div class="two-column-layout">
+        <!-- 左侧边栏 -->
+        <aside class="sidebar">
+            <h2>农场动态</h2>
+            <ul class="farm-activities">
+                <!-- 为每个列表项添加 data-activity 属性 -->
+                <li data-activity="egg">🥚 收集鸡蛋</li>
+                <li data-activity="corn">🌽 收获玉米</li>
+                <li data-activity="chicken">🐔 喂食动物</li>
+                <li data-activity="water">💧 浇水完成</li>
+                <li data-activity="tool">⚒️ 升级工具</li>
+                <li data-activity="sunflower">🌻 种植向日葵</li>
+            </ul>
+            
+            <h2>季节活动</h2>
+            <ul class="season-activities">
+                <!-- 为每个列表项添加 data-season 属性 -->
+                <li data-season="spring">🌸 春季花舞节</li>
+                <li data-season="fishing">🎣 钓鱼大赛</li>
+                <li data-season="fall">🎃 秋季展览会</li>
+                <li data-season="winter">❄️ 冬季冰雪节</li>
+            </ul>
+        </aside>
+        
+        <!-- 右侧主内容区 -->
+        <!-- 添加主内容区ID -->
+        <main id="main-content">
+            <!-- 为文章添加类名和 data-category 属性 -->
+            <article class="blog-post" data-category="农场">
+                <div class="article-header">
+                    <h2>农场日记</h2>
+                    <div class="season-icon">🌸</div>
+                </div>
+                <p>今天借助AI完成了这个网页，以后将用来分享农场生活和冒险日常。春天来了，农场里的作物长得特别好！</p>
+                <div class="farm-items">
+                    <!-- 为物品添加 data-item 属性 -->
+                    <span class="item" data-item="egg">🥚</span>
+                    <span class="item" data-item="corn">🌽</span>
+                    <span class="item" data-item="chicken">🐔</span>
+                </div>
+            </article>
+            
+            <article class="blog-post" data-category="农场">
+                <div class="article-header">
+                    <h2>今日收获</h2>
+                    <div class="season-icon">🌞</div>
+                </div>
+                <p>今天增加了一个钓鱼mod，爷爷再也不用担心我钓不到金星鱼了。</p>
+                <div class="farm-items">
+                    <span class="item" data-item="sunflower">🌻</span>
+                    <span class="item" data-item="strawberry">🍓</span>
+                    <span class="item" data-item="tool">⚒️</span>
+                </div>
+            </article>
+            
+            <article class="blog-post" data-category="社区">
+                <div class="article-header">
+                    <h2>社区中心</h2>
+                    <div class="season-icon">🏛️</div>
+                </div>
+                <p>今天去了社区中心，完成了春季采集包！获得了奖励种子，准备在农场里种植。</p>
+                <div class="farm-items">
+                    <span class="item" data-item="package">📦</span>
+                    <span class="item" data-item="herb">🌿</span>
+                    <span class="item" data-item="gift">🎁</span>
+                </div>
+            </article>
+        </main>
+    </div>
+    
+    <footer>
+        <p>© 2025 星露谷日常分享 | 记录农场生活的点滴</p>
+        <div class="footer-icons">
+            <!-- 为页脚图标添加类名 -->
+            <span class="animal-icon">🐮</span>
+            <span class="animal-icon">🐑</span>
+            <span class="animal-icon">🐷</span>
+        </div>
+    </footer>
+
+    <!-- 添加弹窗容器（在 body 结束前添加） -->
+    <!-- 活动详情弹窗 -->
+    <div id="activity-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+            <div class="modal-extra" id="modal-extra"></div>
+        </div>
+    </div>
+
+    <!-- 文章详情弹窗 -->
+    <div id="article-modal" class="modal">
+        <div class="modal-content article-modal">
+            <span class="close-modal">&times;</span>
+            <h3 id="article-modal-title"></h3>
+            <p id="article-modal-content"></p>
+            <div class="article-extra" id="article-extra"></div>
+        </div>
+    </div>
+
+    <!-- 在 body 结束前引入 JavaScript 文件 -->
+    <script src="script.js"></script>
+</body>
+</html>
